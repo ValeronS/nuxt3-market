@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --color-primary: #0F0F0F;
+    --bg: #ffffff;
+    --bg-highlight: #ffffff;
+    --bg-grey: #DBDBDB;
+    --border: #CCCCCC;
+  }
+}
+ 
+@layer base {
+
+  body {
+    @apply bg-slate-900 text-slate-300;
+    font-family: sans-serif;
+  }
+}

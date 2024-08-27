@@ -1,0 +1,35 @@
+{
+  "name": "test-regul",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 9997",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "format": "yarn prettier --loglevel silent --write \"**/*.{js,json,ts,vue,html}\""
+  },
+  "engines": {
+    "node": "20.13.1",
+    "yarn": "4.4.0"
+  },
+  "packageManager": "yarn@4.4.0",
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "6.12.1",
+    "@pinia/nuxt": "0.5.4",
+    "axios": "1.7.5",
+    "nuxt": "3.13.0",
+    "pinia": "2.2.2",
+    "vue": "3.4.38"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "0.5.2",
+    "@nuxtjs/eslint-module": "4.1.0",
+    "@types/eslint": "9",
+    "eslint": "9.9.1",
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  }
+}
