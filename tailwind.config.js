@@ -7,6 +7,10 @@ export const theme = {
     },
   },
   extend: {
+    fontFamily: {
+      noto: ['Noto Serif', 'serif'],
+      inter: ['Inter', 'sans-serif'],
+    },
     colors: {
       primary: {
         DEFAULT: 'var(--color-primary)',
@@ -15,6 +19,7 @@ export const theme = {
         DEFAULT: 'var(--bg)',
         highlight: 'var(--bg-highlight)',
         grey: 'var(--bg-grey)',
+        'grey-light': 'var(--bg-grey-light)',
       },
       border: {
         DEFAULT: 'var(--border)',

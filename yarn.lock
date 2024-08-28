@@ -1146,6 +1146,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/font@npm:7.4.47":
+  version: 7.4.47
+  resolution: "@mdi/font@npm:7.4.47"
+  checksum: 10c0/4cd44a9e9c40218f00d2500f7408f913ac276348054c9c1b0108330060fecb3cb58c8c08eda39a7535298aaf3f1d28c0c115751cfe9fc2c9cdb9d50450107db9
+  languageName: node
+  linkType: hard
+
 "@netlify/functions@npm:^2.8.0":
   version: 2.8.1
   resolution: "@netlify/functions@npm:2.8.1"
@@ -1350,7 +1357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.13.0, @nuxt/kit@npm:^3.11.2, @nuxt/kit@npm:^3.12.3, @nuxt/kit@npm:^3.12.4, @nuxt/kit@npm:^3.5.0, @nuxt/kit@npm:^3.9.0":
+"@nuxt/kit@npm:3.13.0, @nuxt/kit@npm:^3.10.3, @nuxt/kit@npm:^3.11.2, @nuxt/kit@npm:^3.12.3, @nuxt/kit@npm:^3.12.4, @nuxt/kit@npm:^3.5.0, @nuxt/kit@npm:^3.9.0":
   version: 3.13.0
   resolution: "@nuxt/kit@npm:3.13.0"
   dependencies:
@@ -1480,6 +1487,17 @@ __metadata:
   peerDependencies:
     eslint: ">=7"
   checksum: 10c0/bc9b8356c02b47fe50f37e286d5babf7930e2dded0e05021f34092fc725c2c92ea99a22724f5b88bebaeff16adb0e85c80c7faba0c01befc0242bca9f0e92ba5
+  languageName: node
+  linkType: hard
+
+"@nuxtjs/google-fonts@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@nuxtjs/google-fonts@npm:3.2.0"
+  dependencies:
+    "@nuxt/kit": "npm:^3.10.3"
+    google-fonts-helper: "npm:^3.5.0"
+    pathe: "npm:^1.1.2"
+  checksum: 10c0/bdd4dc825452f9b640da150fb1334e1dd78988b15f565e2bdcb402b5f0565ef9edb0091f0d41f69b32775c621491607efdd80e1911557bf77718f763031d8eb2
   languageName: node
   linkType: hard
 
@@ -2634,6 +2652,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuetify/loader-shared@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@vuetify/loader-shared@npm:2.0.3"
+  dependencies:
+    upath: "npm:^2.0.1"
+  peerDependencies:
+    vue: ^3.0.0
+    vuetify: ^3.0.0
+  checksum: 10c0/88cfe831821e8c4ac11edb725ee7321436f0b152ac8c2aad70ca71d343a39176e79f67314397cfb622118520998712660f4ed036128b0123244ed2cafb2c9b46
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -3274,7 +3304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.5.1, chokidar@npm:^3.5.3, chokidar@npm:^3.6.0":
+"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.5.1, chokidar@npm:^3.5.3, chokidar@npm:^3.6.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
   dependencies:
@@ -3828,7 +3858,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.6":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.6":
   version: 4.3.6
   resolution: "debug@npm:4.3.6"
   dependencies:
@@ -3863,7 +3893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.2.2":
+"deepmerge@npm:^4.2.2, deepmerge@npm:^4.3.1":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
@@ -5331,6 +5361,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"google-fonts-helper@npm:^3.5.0":
+  version: 3.6.0
+  resolution: "google-fonts-helper@npm:3.6.0"
+  dependencies:
+    deepmerge: "npm:^4.3.1"
+    hookable: "npm:^5.5.3"
+    ofetch: "npm:^1.3.4"
+    ufo: "npm:^1.5.3"
+  checksum: 10c0/0c87c0b03546af53317bed18a99271fca472fbbc81230226116d11b159a86810d6b595ad28b6d8933c0d91f679c60b4e93bf57ff57e8200d8e533c82ae5a9a4d
+  languageName: node
+  linkType: hard
+
 "graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
@@ -5586,6 +5628,13 @@ __metadata:
   version: 0.2.1
   resolution: "image-meta@npm:0.2.1"
   checksum: 10c0/c8a100b666663ad53ffe95c22647e79802d6eac6dfa3e1a00e4cf034129b4a13e7861b5c5a7cee46604a45a9e0c8ed91e73233c7bf9f48fbece5f0300ef6912c
+  languageName: node
+  linkType: hard
+
+"immutable@npm:^4.0.0":
+  version: 4.3.7
+  resolution: "immutable@npm:4.3.7"
+  checksum: 10c0/9b099197081b22f6433003e34929da8ecddbbdc1474cdc8aa3b7669dee4adda349c06143de22def36016d1b6de5322b043eccd7a11db1dad2ca85dad4fff5435
   languageName: node
   linkType: hard
 
@@ -8477,6 +8526,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sass@npm:1.77.8":
+  version: 1.77.8
+  resolution: "sass@npm:1.77.8"
+  dependencies:
+    chokidar: "npm:>=3.0.0 <4.0.0"
+    immutable: "npm:^4.0.0"
+    source-map-js: "npm:>=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 10c0/2bfd62794070352c804f949e69bd8bb5b4ec846deeb924251b2c3f7b503170fb1ae186f513f0166907749eb34e0277dee747edcb78c886fb471aac01be1e864c
+  languageName: node
+  linkType: hard
+
 "schema-utils@npm:^4.2.0":
   version: 4.2.0
   resolution: "schema-utils@npm:4.2.0"
@@ -8735,7 +8797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1, source-map-js@npm:^1.2.0":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1, source-map-js@npm:^1.2.0":
   version: 1.2.0
   resolution: "source-map-js@npm:1.2.0"
   checksum: 10c0/7e5f896ac10a3a50fe2898e5009c58ff0dc102dcb056ed27a354623a0ece8954d4b2649e1a1b2b52ef2e161d26f8859c7710350930751640e71e374fe2d321a4
@@ -9198,8 +9260,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "test-regul@workspace:."
   dependencies:
+    "@mdi/font": "npm:7.4.47"
     "@nuxt/eslint-config": "npm:0.5.2"
     "@nuxtjs/eslint-module": "npm:4.1.0"
+    "@nuxtjs/google-fonts": "npm:3.2.0"
     "@nuxtjs/tailwindcss": "npm:6.12.1"
     "@pinia/nuxt": "npm:0.5.4"
     "@types/eslint": "npm:9"
@@ -9208,8 +9272,11 @@ __metadata:
     nuxt: "npm:3.13.0"
     pinia: "npm:2.2.2"
     prettier: "npm:3.3.3"
+    sass: "npm:1.77.8"
     typescript: "npm:5.5.4"
+    vite-plugin-vuetify: "npm:2.0.4"
     vue: "npm:3.4.38"
+    vuetify: "npm:3.7.1"
   languageName: unknown
   linkType: soft
 
@@ -9671,6 +9738,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"upath@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "upath@npm:2.0.1"
+  checksum: 10c0/79e8e1296b00e24a093b077cfd7a238712d09290c850ce59a7a01458ec78c8d26dcc2ab50b1b9d6a84dabf6511fb4969afeb8a5c9a001aa7272b9cc74c34670f
+  languageName: node
+  linkType: hard
+
 "update-browserslist-db@npm:^1.1.0":
   version: 1.1.0
   resolution: "update-browserslist-db@npm:1.1.0"
@@ -9863,6 +9937,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vite-plugin-vuetify@npm:2.0.4":
+  version: 2.0.4
+  resolution: "vite-plugin-vuetify@npm:2.0.4"
+  dependencies:
+    "@vuetify/loader-shared": "npm:^2.0.3"
+    debug: "npm:^4.3.3"
+    upath: "npm:^2.0.1"
+  peerDependencies:
+    vite: ">=5"
+    vue: ^3.0.0
+    vuetify: ^3.0.0
+  checksum: 10c0/23c03bfcb9997e4aeeef7a5ed64f9849189bf1a5599ab228cd9c49c87ef7867f0abc51f3c5a93cf261288b10d3947d529c5399e1d4f720879d8ed18e6f1419d4
+  languageName: node
+  linkType: hard
+
 "vite@npm:^5.0.0, vite@npm:^5.4.2":
   version: 5.4.2
   resolution: "vite@npm:5.4.2"
@@ -10041,6 +10130,25 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/b5fc08838b05ad9e8d245175e356d27d9d6df64d2060037253aa3e2d3a50a89b8413f7f553595860677bedf56a0640495b03ca29dea9c6f2ca2273ef513c3f15
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:3.7.1":
+  version: 3.7.1
+  resolution: "vuetify@npm:3.7.1"
+  peerDependencies:
+    typescript: ">=4.7"
+    vite-plugin-vuetify: ">=1.0.0"
+    vue: ^3.3.0
+    webpack-plugin-vuetify: ">=2.0.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+    vite-plugin-vuetify:
+      optional: true
+    webpack-plugin-vuetify:
+      optional: true
+  checksum: 10c0/ec110618d052512ca169b2f6269fcf6101504dc4fade95c3b517b9d64f1ff89af62ea24243ed5d119c1430a7bb086220648106dcac68239424af6e4a5c33bf71
   languageName: node
   linkType: hard
 

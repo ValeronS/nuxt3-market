@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container"></div>
+  <div>
+    <LayoutNavbar />
+  </div>
 </template>
 
 <style scoped></style>
