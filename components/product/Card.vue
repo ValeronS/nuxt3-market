@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-col items-center mt-[25px]">
-    <ProductSelect />
-  </div>
+  <div></div>
 </template>
 
 <style scoped lang="scss"></style>

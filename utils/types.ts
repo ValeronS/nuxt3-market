@@ -16,3 +16,10 @@ export enum EDocStatus {
   rejected = 'rejected',
   onReview = 'onReview',
 }
+
+export type Category = {
+  value: number
+  title: string
+  category: number
+  count: number
+}

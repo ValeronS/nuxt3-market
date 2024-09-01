@@ -20,6 +20,7 @@ export const theme = {
         highlight: 'var(--bg-highlight)',
         grey: 'var(--bg-grey)',
         'grey-light': 'var(--bg-grey-light)',
+        'grey-dark': 'var(--bg-grey-dark)',
       },
       border: {
         DEFAULT: 'var(--border)',
