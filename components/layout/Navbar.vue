@@ -8,7 +8,7 @@ console.log('data', data.value)
 </script>
 
 <template>
-  <div>
+  <nav>
     <div
       class="w-full flex items-center justify-between py-[10px] px-[40px] bg-bg-highlight"
     >
@@ -56,11 +56,7 @@ console.log('data', data.value)
         </VBtn>
       </div>
     </div>
-
-    <LayoutHeader />
-
-    <VDivider class="border-opacity-100 mt-[32px]" />
-  </div>
+  </nav>
 </template>
 
 <style scoped lang="scss"></style>

@@ -4,6 +4,8 @@
       <LayoutNavbar />
 
       <NuxtPage />
+
+      <LayoutFooter />
     </v-app>
   </NuxtLayout>
 </template>
