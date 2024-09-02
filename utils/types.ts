@@ -23,3 +23,18 @@ export type Category = {
   category: number
   count: number
 }
+
+type ProductStatus = 'promote' | 'hidden'
+export enum EProductStatus {
+  'promote' = 'promote',
+  'hidden' = 'hidden',
+}
+export type Product = {
+  id: string
+  price: number
+  imageUrl: string
+  title: string
+  views: number
+  createdAt: string
+  status: ProductStatus | null
+}

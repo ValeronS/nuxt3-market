@@ -1,0 +1,88 @@
+import type { Product } from '~/utils/types'
+
+export default defineEventHandler(() => {
+  const products: Product[] = [
+    {
+      id: '1',
+      price: 450500,
+      imageUrl: 'product/product_1.png',
+      title: 'Сlavia Nord Grand сценическое цифровое пианино',
+      views: 750,
+      status: 'promote',
+      createdAt: '2024-08-26 17:26',
+    },
+    {
+      id: '2',
+      price: 3285000,
+      imageUrl: 'product/product_2.png',
+      title: 'Hyundai Sonata 2.0 AT, 2023, 30 км',
+      views: 255,
+      status: null,
+      createdAt: '2024-08-28 17:26',
+    },
+    {
+      id: '3',
+      price: 4800000,
+      imageUrl: 'product/product_3.png',
+      title: '2-к. квартира, 46 м², 1/5 эт.',
+      views: 265,
+      status: null,
+      createdAt: '2024-08-30 17:26',
+    },
+    {
+      id: '4',
+      price: 7500,
+      imageUrl: 'product/product_4.png',
+      title: 'Старые барабаны',
+      views: 0,
+      status: null,
+      createdAt: '2024-09-02 12:26',
+    },
+    {
+      id: '5',
+      price: 7500,
+      imageUrl: 'product/product_5.png',
+      title: 'DMX сплиттер RJ45 to 4x XLR Stairville',
+      views: 120,
+      status: null,
+      createdAt: '2024-09-01 12:26',
+    },
+    {
+      id: '6',
+      price: 217500,
+      imageUrl: 'product/product_6.png',
+      title: 'DMX сплиттер RJ45 to 4x XLR Stairville',
+      views: 1234,
+      status: null,
+      createdAt: '2024-07-01 12:26',
+    },
+    {
+      id: '7',
+      price: 17900,
+      imageUrl: 'product/product_7.png',
+      title: 'Иж юпитер 5',
+      views: 1234,
+      status: null,
+      createdAt: '2024-06-01 12:26',
+    },
+    {
+      id: '8',
+      price: 17900,
+      imageUrl: 'product/product_8.png',
+      title: 'Пылесос кёрхер с водяным мешком для сбора пыли',
+      views: 555,
+      status: 'hidden',
+      createdAt: '2024-06-01 12:26',
+    },
+    {
+      id: '9',
+      price: 7788,
+      imageUrl: '',
+      title: 'Пылесос кёрхер с водяным мешком для сбора пыли',
+      views: 9,
+      status: 'hidden',
+      createdAt: '2024-06-01 12:26',
+    },
+  ]
+  return products
+})
