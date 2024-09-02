@@ -4,17 +4,20 @@ export type Company = {
   phone: string
 }
 
-export type CompanyReview = {
-  id: string
-  docStatus: string
-  rating: number
+type ReviewStatus = 'approved' | 'rejected' | 'onReview'
+export type Review = {
+  rating: number | null
   reviewCount: number
+  reviewStatus: ReviewStatus
 }
-
-export enum EDocStatus {
+export enum EReviewStatus {
   approved = 'approved',
   rejected = 'rejected',
   onReview = 'onReview',
+}
+
+export type CompanyReview = Review & {
+  id: string
 }
 
 export type Category = {
@@ -37,4 +40,11 @@ export type Product = {
   views: number
   createdAt: string
   status: ProductStatus | null
+}
+
+export type AgentPerson = Review & {
+  id: string
+  name: string
+  imageUrl: string
+  description: string
 }

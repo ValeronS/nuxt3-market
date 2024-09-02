@@ -6,7 +6,7 @@ export default defineEventHandler(async (e) => {
   const companies: CompanyReview[] = [
     {
       id: '1',
-      docStatus: 'approved',
+      reviewStatus: 'approved',
       rating: 4.7,
       reviewCount: 19,
     },

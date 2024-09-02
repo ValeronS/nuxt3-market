@@ -1,18 +1,26 @@
 export const AppUrls = {
   index: {
     path: '/',
-    name: 'index',
+    name: 'Index',
   },
   home: {
     path: '/home',
-    name: 'home',
+    name: 'Home',
+  },
+  agents: {
+    path: '/agents',
+    name: 'Agents',
+  },
+  aboutCompany: {
+    path: '/about-company',
+    name: 'AboutCompany',
   },
   documents: {
     path: '/documents',
-    name: 'documents',
+    name: 'Documents',
   },
   about: {
     path: '/about',
-    name: 'about',
+    name: 'About',
   },
 }
