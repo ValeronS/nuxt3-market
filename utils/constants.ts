@@ -1,4 +1,6 @@
-export const AppUrls = {
+import type { DaysOfWeek, Route } from '~/utils/types'
+
+export const AppUrls: Record<string, Route> = {
   index: {
     path: '/',
     name: 'Index',
@@ -12,8 +14,8 @@ export const AppUrls = {
     name: 'Agents',
   },
   aboutCompany: {
-    path: '/about-company',
-    name: 'AboutCompany',
+    path: '/aboutcompany',
+    name: 'aboutcompany',
   },
   documents: {
     path: '/documents',
@@ -24,3 +26,13 @@ export const AppUrls = {
     name: 'About',
   },
 }
+
+export const daysOfWeek: DaysOfWeek[] = [
+  'Воскресенье',
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
+]

@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import type { Company, CompanyReview } from '~/utils/types'
-import { useRoute, useRouter } from '#imports'
+import { useRoute } from '#imports'
 
 const route = useRoute()
-const router = useRouter()
 
-const { data: company } = await useFetch<Company>('/company?id=1')
+const { data: company } = await useFetch<Company>('/company/company?id=1')
 const { data: companyReview } = await useFetch<CompanyReview>(
-  '/company-review?id=1',
+  '/company/company-review?id=1',
 )
 
 const isPhoneVisible = ref<boolean>(false)
+
+const isCurrentPage = (path: string) =>
+  route.path === path ? 'outlined' : 'flat'
 </script>
 
 <template>
@@ -31,27 +33,30 @@ const isPhoneVisible = ref<boolean>(false)
       </VBtn>
 
       <div class="flex items-center gap-[8px] mt-[20px]">
-        <VBtn
-          text="Товары и услуги"
-          :height="40"
-          :variant="route.name === AppUrls.home.name ? 'outlined' : 'flat'"
-          class="text-none !font-medium !bg-bg-grey-light"
-          @click="router.push(AppUrls.home.path)"
-        />
-        <VBtn
-          text="Агенты"
-          :height="40"
-          :variant="route.name === AppUrls.agents.name ? 'outlined' : 'flat'"
-          class="text-none !font-medium !bg-bg-grey-light"
-          @click="router.push(AppUrls.agents.path)"
-        />
-        <VBtn
-          text="О компании"
-          :height="40"
-          :variant="route.name === AppUrls.about.name ? 'outlined' : 'flat'"
-          class="text-none !font-medium !bg-bg-grey-light"
-          @click="router.push(AppUrls.aboutCompany.path)"
-        />
+        <NuxtLink id="HomeLink" :to="AppUrls.home.path">
+          <VBtn
+            text="Товары и услуги"
+            :height="40"
+            :variant="isCurrentPage(AppUrls.home.path)"
+            class="text-none !font-medium !bg-bg-grey-light"
+          />
+        </NuxtLink>
+        <NuxtLink id="AgentsLink" :to="AppUrls.agents.path">
+          <VBtn
+            text="Агенты"
+            :height="40"
+            :variant="isCurrentPage(AppUrls.agents.path)"
+            class="text-none !font-medium !bg-bg-grey-light"
+          />
+        </NuxtLink>
+        <NuxtLink id="AboutCompanyLink" :to="AppUrls.aboutCompany.path">
+          <VBtn
+            text="О компании"
+            :height="40"
+            :variant="isCurrentPage(AppUrls.aboutCompany.path)"
+            class="text-none !font-medium !bg-bg-grey-light"
+          />
+        </NuxtLink>
       </div>
     </div>
 

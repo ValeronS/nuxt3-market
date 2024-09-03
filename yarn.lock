@@ -2664,6 +2664,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yandex/ymaps3-types@npm:>=0.0.27":
+  version: 0.0.27
+  resolution: "@yandex/ymaps3-types@npm:0.0.27"
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    "@vue/runtime-core": 3
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+    "@vue/runtime-core":
+      optional: true
+  checksum: 10c0/082ab51cbbd650c2421c067e4387e257556787970cfc4bfb87947b4e5929e33536a157e4dc5ccc6ef7bda1282f0102ba34b27ca9f724546ad8c49fd23be20518
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -9276,6 +9294,7 @@ __metadata:
     typescript: "npm:5.5.4"
     vite-plugin-vuetify: "npm:2.0.4"
     vue: "npm:3.4.38"
+    vue-yandex-maps: "npm:2.1.4"
     vuetify: "npm:3.7.1"
   languageName: unknown
   linkType: soft
@@ -10112,6 +10131,24 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: 10c0/dc13c30367653fb441f3f6378dc64645250e55a4089c8f547ffe0e1227122fbd02da53b14ecff9711b02e44070a5495c9e97b69954386ea55fb9644dd8dbb1d3
+  languageName: node
+  linkType: hard
+
+"vue-yandex-maps@npm:2.1.4":
+  version: 2.1.4
+  resolution: "vue-yandex-maps@npm:2.1.4"
+  dependencies:
+    "@yandex/ymaps3-types": "npm:>=0.0.27"
+  peerDependencies:
+    "@vue/composition-api": ">=1"
+    nuxt: ^2.16 || ^3
+    vue: ^2.7 || ^3.3
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    nuxt:
+      optional: true
+  checksum: 10c0/d6fcc92be5076c76afb7afb8681fa7e33d7c3873fcc9aee59c5eeb3072e5b304d82f872361c2c5d306d847f56b810a479a9b255c49ebf4b2cbc7df0e8ae6664b
   languageName: node
   linkType: hard
 

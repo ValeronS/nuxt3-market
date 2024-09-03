@@ -6,13 +6,17 @@ import { AppUrls } from '~/utils/constants'
   <footer class="footer">
     <span class="text-[15px] leading-[24px] font-medium">© Annonce 2023</span>
 
-    <router-link :to="AppUrls.documents.path" class="footer__link">
+    <NuxtLink
+      id="DocumentsLink"
+      :to="AppUrls.documents.path"
+      class="footer__link"
+    >
       Документы
-    </router-link>
+    </NuxtLink>
 
-    <router-link :to="AppUrls.about.path" class="footer__link">
+    <NuxtLink id="AboutLink" :to="AppUrls.about.path" class="footer__link">
       О компании
-    </router-link>
+    </NuxtLink>
   </footer>
 </template>
 

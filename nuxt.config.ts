@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
+    'vue-yandex-maps/nuxt',
     [
       '@nuxtjs/google-fonts',
       {
@@ -41,6 +42,9 @@ export default defineNuxtConfig({
       )
     },
   ],
+  yandexMaps: {
+    apikey: process.env.YANDEX_API_KEY,
+  },
   vite: {
     vue: {
       template: {

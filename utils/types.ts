@@ -1,3 +1,8 @@
+export type Route = {
+  path: string
+  name: string
+}
+
 export type Company = {
   name: string
   logoUrl: string
@@ -47,4 +52,24 @@ export type AgentPerson = Review & {
   name: string
   imageUrl: string
   description: string
+}
+
+export type DaysOfWeek =
+  | 'Воскресенье'
+  | 'Понедельник'
+  | 'Вторник'
+  | 'Среда'
+  | 'Четверг'
+  | 'Пятница'
+  | 'Суббота'
+type ScheduleItem = {
+  title: DaysOfWeek
+  value: string
+}
+export type CompanyAbout = {
+  description: string
+  schedule: ScheduleItem[]
+  address: string
+  latitude: number
+  longitude: number
 }
