@@ -70,6 +70,7 @@ export const categories: Category[] = [
 export const products: Product[] = [
   {
     id: '1',
+    category: 1,
     price: 450500,
     imageUrl: 'product/product_1.png',
     title: 'Сlavia Nord Grand сценическое цифровое пианино',
@@ -79,6 +80,7 @@ export const products: Product[] = [
   },
   {
     id: '2',
+    category: 2,
     price: 3285000,
     imageUrl: 'product/product_2.png',
     title: 'Hyundai Sonata 2.0 AT, 2023, 30 км',
@@ -88,6 +90,7 @@ export const products: Product[] = [
   },
   {
     id: '3',
+    category: 3,
     price: 4800000,
     imageUrl: 'product/product_3.png',
     title: '2-к. квартира, 46 м², 1/5 эт.',
@@ -97,6 +100,7 @@ export const products: Product[] = [
   },
   {
     id: '4',
+    category: 4,
     price: 7500,
     imageUrl: 'product/product_4.png',
     title: 'Старые барабаны',
@@ -106,6 +110,7 @@ export const products: Product[] = [
   },
   {
     id: '5',
+    category: 1,
     price: 7500,
     imageUrl: 'product/product_5.png',
     title: 'DMX сплиттер RJ45 to 4x XLR Stairville',
@@ -115,6 +120,7 @@ export const products: Product[] = [
   },
   {
     id: '6',
+    category: 2,
     price: 217500,
     imageUrl: 'product/product_6.png',
     title: 'DMX сплиттер RJ45 to 4x XLR Stairville',
@@ -124,6 +130,7 @@ export const products: Product[] = [
   },
   {
     id: '7',
+    category: 3,
     price: 17900,
     imageUrl: 'product/product_7.png',
     title: 'Иж юпитер 5',
@@ -133,6 +140,7 @@ export const products: Product[] = [
   },
   {
     id: '8',
+    category: 4,
     price: 17900,
     imageUrl: 'product/product_8.png',
     title: 'Пылесос кёрхер с водяным мешком для сбора пыли',
@@ -142,6 +150,7 @@ export const products: Product[] = [
   },
   {
     id: '9',
+    category: 1,
     price: 7788,
     imageUrl: '',
     title: 'Пылесос кёрхер с водяным мешком для сбора пыли',

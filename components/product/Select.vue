@@ -2,6 +2,8 @@
 import CheckedIcon from 'assets/icon/CheckedIcon.vue'
 import type { Category } from '~/utils/types'
 
+const selected = defineModel<number | null>()
+
 const { data: categories } = await useFetch<Category[]>('/product/categories')
 
 type CategorizedItem =
@@ -9,6 +11,7 @@ type CategorizedItem =
   | { props: { category: string } }
 
 const sortedCategories = computed<CategorizedItem[]>(() => {
+  // для корректной работы v-select нужно к объектам списка добавить свойства props с нужными для логики данными
   if (!categories.value) return []
   const sorted = [...categories.value]
   sorted.sort((a, b) => a.category - b.category)
@@ -26,13 +29,10 @@ const sortedCategories = computed<CategorizedItem[]>(() => {
   return result
 })
 
-const selected = ref<Category | null>(null)
 const isOpen = ref<boolean>(false)
-const isFocused = ref<boolean>(false)
 const toggle = () => {
   if (!selected.value) return
   selected.value = null
-  isFocused.value = false
   isOpen.value = false
 }
 </script>
@@ -43,7 +43,6 @@ const toggle = () => {
     <VSelect
       v-model="selected"
       v-model:menu="isOpen"
-      v-model:focused="isFocused"
       :items="sortedCategories"
       variant="outlined"
       bg-color="#DBDBDB"

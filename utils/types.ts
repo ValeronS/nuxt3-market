@@ -69,6 +69,7 @@ export enum EProductStatus {
 }
 export type Product = {
   id: string
+  category: number
   price: number
   imageUrl: string
   title: string

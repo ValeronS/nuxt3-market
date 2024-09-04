@@ -20,11 +20,13 @@ const handleLogout = () => {
       class="w-full flex items-center justify-between py-[10px] px-[40px] bg-bg-highlight"
     >
       <div class="flex items-center gap-[12px]">
-        <div
+        <NuxtLink
+          id="BrandLink"
+          :to="AppUrls.home.path"
           class="pr-[25px] text-[28px] leading-[28px] font-noto font-semibold"
         >
           Annoncé
-        </div>
+        </NuxtLink>
         <VBtn
           :height="40"
           rounded="xl"

@@ -2,23 +2,27 @@
 import type { Product } from '~/utils/types'
 
 const { data: products } = await useFetch<Product[]>('/product/list')
+
+const selectedCategory = ref<number | null>(null)
 </script>
 
 <template>
-  <div>
+  <div class="h-full">
     <LayoutHeader />
 
     <div
       class="max-w-[2200px] flex flex-col items-center mt-[25px] mx-auto px-[32px]"
     >
-      <ProductSelect />
+      <ProductSelect v-model="selectedCategory" />
 
       <div class="flex flex-wrap justify-center gap-[8px]">
-        <ProductCard
-          v-for="product in products"
-          :key="product.id"
-          :product="product"
-        />
+        <template v-for="product in products">
+          <ProductCard
+            v-if="!selectedCategory || product.category === selectedCategory"
+            :key="product.id"
+            :product="product"
+          />
+        </template>
       </div>
     </div>
   </div>
