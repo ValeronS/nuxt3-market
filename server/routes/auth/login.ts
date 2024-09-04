@@ -1,9 +1,6 @@
 import type { H3Event } from 'h3'
 import jwt from 'jsonwebtoken'
-
-const users: Record<string, string>[] = [
-  { username: 'admin', password: 'secret' },
-]
+import { users } from '~/server/routes/data'
 
 const isLoginCorrect = (username: string, password: string): boolean =>
   users.some((user) => user.username === username && user.password === password)

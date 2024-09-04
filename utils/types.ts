@@ -21,7 +21,19 @@ export type BackendError = {
     statusMessage: string
   }
 }
+
+export type User = {
+  id: string
+  username: string
+  password: string
+  imageUrl: string
+  name: string
+  phone: string
+  city: string
+}
+
 export type Company = {
+  id: string
   name: string
   logoUrl: string
   phone: string

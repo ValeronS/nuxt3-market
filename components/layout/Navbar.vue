@@ -6,7 +6,7 @@ import { AppUrls, navigateTo } from '#imports'
 
 const authStore = useAuthStore()
 
-const { data } = await useFetch('/avatar?id=1')
+const { data } = await useFetch('/user/get-by-id?id=1')
 
 const handleLogout = () => {
   authStore.clearToken()
@@ -41,7 +41,7 @@ const handleLogout = () => {
       <div class="flex items-center justify-center">
         <VBtn variant="text" class="text-none">
           <MapMarkerIcon />
-          Ростов-на-Дону
+          {{ data?.city }}
         </VBtn>
         <VDivider class="border-opacity-100 my-auto" :length="32" vertical />
         <VBtn
@@ -63,7 +63,7 @@ const handleLogout = () => {
               <div class="flex items-center justify-between gap-[8px]">
                 <MenuBurgerIcon />
                 <img
-                  :src="data?.url"
+                  :src="data?.imageUrl"
                   alt="avatar"
                   :width="40"
                   class="rounded-full"
@@ -72,6 +72,8 @@ const handleLogout = () => {
             </VBtn>
           </template>
           <VList>
+            <VListItem :title="data?.name" />
+            <VDivider class="border-opacity-100" />
             <VListItem title="Выйти" @click="handleLogout" />
           </VList>
         </VMenu>
