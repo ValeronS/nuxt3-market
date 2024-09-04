@@ -52,16 +52,16 @@ const todaySchedule = computed(() => {
             </v-btn>
           </template>
 
-          <v-list>
-            <v-list-item
+          <VList>
+            <VListItem
               v-for="(item, index) in companyAbout.schedule"
               :key="index"
             >
-              <v-list-item-title class="last:!text-red">
+              <VListItemTitle class="last:!text-red">
                 {{ `${item.title} ${item.value}` }}
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
+              </VListItemTitle>
+            </VListItem>
+          </VList>
         </v-menu>
 
         <div class="flex justify-between mt-[12px]">

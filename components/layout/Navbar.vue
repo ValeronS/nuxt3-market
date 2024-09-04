@@ -2,9 +2,16 @@
 import CategoriesIcon from 'assets/icon/CategiesIcon.vue'
 import MapMarkerIcon from 'assets/icon/MapMarkerIcon.vue'
 import MenuBurgerIcon from 'assets/icon/MenuBurgerIcon.vue'
+import { AppUrls, navigateTo } from '#imports'
+
+const authStore = useAuthStore()
 
 const { data } = await useFetch('/avatar?id=1')
-console.log('data', data.value)
+
+const handleLogout = () => {
+  authStore.clearToken()
+  navigateTo(AppUrls.login.path)
+}
 </script>
 
 <template>
@@ -43,17 +50,31 @@ console.log('data', data.value)
           text="Разместить объявление"
           color="#337566"
         />
-        <VBtn variant="flat" density="compact" rounded="pill" class="px-0">
-          <div class="flex items-center justify-between gap-[8px]">
-            <MenuBurgerIcon />
-            <img
-              :src="data?.url"
-              alt="avatar"
-              :width="40"
-              class="rounded-full"
-            />
-          </div>
-        </VBtn>
+
+        <VMenu>
+          <template #activator="{ props }">
+            <VBtn
+              v-bind="props"
+              variant="flat"
+              density="compact"
+              rounded="pill"
+              class="px-0"
+            >
+              <div class="flex items-center justify-between gap-[8px]">
+                <MenuBurgerIcon />
+                <img
+                  :src="data?.url"
+                  alt="avatar"
+                  :width="40"
+                  class="rounded-full"
+                />
+              </div>
+            </VBtn>
+          </template>
+          <VList>
+            <VListItem title="Выйти" @click="handleLogout" />
+          </VList>
+        </VMenu>
       </div>
     </div>
   </nav>

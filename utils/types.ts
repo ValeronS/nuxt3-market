@@ -1,8 +1,26 @@
+export interface Locally {
+  getItem(item: string): string | null | undefined
+  setItem(item: string, value: string): void
+}
+
+// регистрация модуля для доступа из useNuxtApp
+declare module '#app' {
+  interface NuxtApp {
+    $locally: Locally
+  }
+}
+
 export type Route = {
   path: string
   name: string
 }
 
+export type BackendError = {
+  data: {
+    statusCode: number
+    statusMessage: string
+  }
+}
 export type Company = {
   name: string
   logoUrl: string

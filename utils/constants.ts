@@ -5,6 +5,10 @@ export const AppUrls: Record<string, Route> = {
     path: '/',
     name: 'Index',
   },
+  login: {
+    path: '/login',
+    name: 'Login',
+  },
   home: {
     path: '/home',
     name: 'Home',
