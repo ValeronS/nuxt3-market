@@ -1,75 +1,154 @@
-# Nuxt 3 Minimal Starter
+This is a Nuxt.js 3 project with a range of dependencies for building and styling modern web applications. The project utilizes Pinia for state management, TailwindCSS for styling, and other tools for enhancing the development experience.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Table of Contents
 
-## Setup
+	•	Requirements
+	•	Getting Started
+	•	Available Scripts
+	•	Project Structure
+	•	Contributing
+	•	License
 
-Make sure to install the dependencies:
+Requirements
 
-```bash
-# npm
-npm install
+Before starting, ensure you have the following tools installed:
 
-# pnpm
-pnpm install
+	•	Node.js version 20.13.1
+	•	Yarn version 4.4.0
 
-# yarn
+Getting Started
+
+Install Dependencies
+
+To install all the dependencies, run:
 yarn install
 
-# bun
-bun install
-```
+Run the Development Server
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
+To start the project in development mode, use:
 yarn dev
 
-# bun
-bun run dev
-```
+This will launch the Nuxt.js app on port 9997. You can change the port if needed by modifying the dev script in package.json.
 
-## Production
+Build for Production
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
+To build the application for production, run:
 yarn build
 
-# bun
-bun run build
-```
+This will generate optimized files for production.
 
-Locally preview production build:
+Generate Static Files
 
-```bash
-# npm
-npm run preview
+If you are working with a static deployment, use:
+yarn generate
 
-# pnpm
-pnpm run preview
+This command will generate static HTML files for your project.
 
-# yarn
+Preview the Production Build
+
+After building for production, you can preview the application with:
 yarn preview
 
-# bun
-bun run preview
-```
+Format Code
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project uses Prettier for code formatting. To format your code, run:
+yarn format
+
+Project Structure
+
+	•	Nuxt.js: The core framework for the project.
+	•	Pinia: State management for Vue.js.
+	•	TailwindCSS: Utility-first CSS framework for designing interfaces.
+	•	Vuetify: Material Design framework for Vue.js components.
+	•	Axios: HTTP client for making API requests.
+	•	Vue Yandex Maps: Map component integration with Yandex Maps.
+
+Contributing
+
+	1.	Fork the repository.
+	2.	Create a new branch (git checkout -b feature-branch).
+	3.	Commit your changes (git commit -m 'Add new feature').
+	4.	Push to the branch (git push origin feature-branch).
+	5.	Create a pull request.
+
+License
+
+This project is licensed under the MIT License.
+
+_______________________________________________
+Это проект на Nuxt.js 3 с набором зависимостей для создания и стилизации современных веб-приложений. В проекте используется Pinia для управления состоянием, TailwindCSS для стилизации и другие инструменты для улучшения процесса разработки.
+
+Содержание
+
+	•	Требования
+	•	Начало работы
+	•	Доступные команды
+	•	Структура проекта
+	•	Вклад в проект
+	•	Лицензия
+
+Требования
+
+Перед началом работы убедитесь, что у вас установлены следующие инструменты:
+
+	•	Node.js версии 20.13.1
+	•	Yarn версии 4.4.0
+
+Начало работы
+
+Установка зависимостей
+
+Чтобы установить все зависимости, выполните команду:
+yarn install
+
+Запуск в режиме разработки
+
+Для запуска проекта в режиме разработки используйте команду:
+yarn dev
+
+Это запустит Nuxt.js приложение на порту 9997. При необходимости можно изменить порт в скрипте dev в файле package.json.
+
+Сборка для продакшена
+
+Для сборки приложения для продакшена выполните команду:
+yarn build
+
+Это создаст оптимизированные файлы для продакшена.
+
+Генерация статических файлов
+
+Если вы планируете развертывание как статический сайт, используйте команду:
+yarn generate
+
+Эта команда сгенерирует статические HTML-файлы для вашего проекта.
+
+Просмотр продакшен-сборки
+
+После сборки для продакшена можно просмотреть результат с помощью команды:
+yarn preview
+
+Форматирование кода
+
+Этот проект использует Prettier для форматирования кода. Чтобы отформатировать код, выполните команду:
+yarn format
+
+Структура проекта
+
+	•	Nuxt.js: Основной фреймворк проекта.
+	•	Pinia: Управление состоянием для Vue.js.
+	•	TailwindCSS: CSS-фреймворк для проектирования интерфейсов.
+	•	Vuetify: Фреймворк компонентов Material Design для Vue.js.
+	•	Axios: HTTP-клиент для выполнения API-запросов.
+	•	Vue Yandex Maps: Компонент для интеграции Яндекс Карт.
+
+Вклад в проект
+
+	1.	Форкните репозиторий.
+	2.	Создайте новую ветку (git checkout -b feature-branch).
+	3.	Зафиксируйте изменения (git commit -m 'Добавил новую функцию').
+	4.	Отправьте изменения в ветку (git push origin feature-branch).
+	5.	Создайте pull request.
+
+Лицензия
+
+Этот проект распространяется под лицензией MIT.
