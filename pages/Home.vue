@@ -1,14 +1,23 @@
 <script setup lang="ts">
 import type { Product } from '~/utils/types'
+import { useCartStore } from '~/stores/cart'
+
+const cartStore = useCartStore()
 
 const { data: products } = await useFetch<Product[]>('/product/list')
 
 const selectedCategory = ref<number | null>(null)
+const cart = ref<Set<Product>>(new Set<Product>())
+
+const handleCart = (product: Product) => {
+  cart.value.has(product) ? cart.value.delete(product) : cart.value.add(product)
+  cartStore.setCart(cart.value)
+}
 </script>
 
 <template>
   <div class="h-full">
-    <LayoutHeader />
+    <LayoutHeader :product-count="products?.length" />
 
     <div
       class="max-w-[2200px] flex flex-col items-center mt-[25px] mx-auto px-[32px]"
@@ -21,6 +30,7 @@ const selectedCategory = ref<number | null>(null)
             v-if="!selectedCategory || product.category === selectedCategory"
             :key="product.id"
             :product="product"
+            @add-to-cart="handleCart"
           />
         </template>
       </div>

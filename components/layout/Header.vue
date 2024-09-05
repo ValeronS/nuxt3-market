@@ -2,9 +2,15 @@
 import type { Company, CompanyReview } from '~/utils/types'
 import { useRoute } from '#imports'
 
+type Props = {
+  productCount?: number
+  agentCount?: number
+}
+defineProps<Props>()
+
 const route = useRoute()
 
-const { data: company } = await useFetch<Company>('/company/company?id=1')
+const { data: company } = await useFetch<Company>('/company/get-by-id?id=1')
 const { data: companyReview } = await useFetch<CompanyReview>(
   '/company/company-review?id=1',
 )
@@ -16,37 +22,42 @@ const isCurrentPage = (path: string) =>
 </script>
 
 <template>
-  <div>
-    <div class="flex flex-col items-center gap-[12px]">
-      <div class="flex flex-col gap-[24px]">
+  <header class="header">
+    <div class="flex flex-col items-center gap-[12px] overflow-x-auto">
+      <div class="hidden md:flex flex-col gap-[24px]">
         <img :src="company?.logoUrl" alt="avatar" :width="120" />
         <h3>{{ company?.name }}</h3>
       </div>
 
-      <SharedReviewBlock :review="companyReview" />
+      <SharedReviewBlock :review="companyReview" class="hidden md:flex" />
 
-      <VBtn color="#337566" class="mt-[12px] text-none !font-medium">
-        <span v-if="!isPhoneVisible" @click="isPhoneVisible = !isPhoneVisible">
-          Показать номер телефона
-        </span>
-        <span v-else>{{ formatPhone(company?.phone) }}</span>
-      </VBtn>
+      <div class="hidden md:block">
+        <VBtn color="#337566" class="mt-[12px] text-none !font-medium">
+          <span
+            v-if="!isPhoneVisible"
+            @click="isPhoneVisible = !isPhoneVisible"
+          >
+            Показать номер телефона
+          </span>
+          <span v-else>{{ formatPhone(company?.phone) }}</span>
+        </VBtn>
+      </div>
 
-      <div class="flex items-center gap-[8px] mt-[20px]">
+      <div class="flex items-center gap-[8px] mt-[8px] ml-[30px] md:mt-[20px]">
         <NuxtLink id="HomeLink" :to="AppUrls.home.path">
           <VBtn
-            text="Товары и услуги"
+            :text="`Товары и услуги ${productCount ? productCount : ''}`"
             :height="40"
             :variant="isCurrentPage(AppUrls.home.path)"
-            class="text-none !font-medium !bg-bg-grey-light"
+            class="btn text-none"
           />
         </NuxtLink>
         <NuxtLink id="AgentsLink" :to="AppUrls.agents.path">
           <VBtn
-            text="Агенты"
+            :text="`Агенты ${agentCount ? agentCount : ''}`"
             :height="40"
             :variant="isCurrentPage(AppUrls.agents.path)"
-            class="text-none !font-medium !bg-bg-grey-light"
+            class="btn text-none"
           />
         </NuxtLink>
         <NuxtLink id="AboutCompanyLink" :to="AppUrls.aboutCompany.path">
@@ -54,14 +65,20 @@ const isCurrentPage = (path: string) =>
             text="О компании"
             :height="40"
             :variant="isCurrentPage(AppUrls.aboutCompany.path)"
-            class="text-none !font-medium !bg-bg-grey-light"
+            class="btn text-none"
           />
         </NuxtLink>
       </div>
     </div>
 
-    <VDivider class="border-opacity-100 mt-[32px]" />
-  </div>
+    <VDivider class="border-opacity-100 mt-[8px] md:mt-[32px]" />
+  </header>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.header {
+  .btn {
+    @apply md:!px-[24px] !px-[12px] !font-medium !bg-bg-grey-light;
+  }
+}
+</style>

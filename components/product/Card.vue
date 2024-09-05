@@ -9,6 +9,11 @@ type Props = {
 }
 defineProps<Props>()
 
+type Emits = {
+  (e: 'add-to-cart', v: Product): void
+}
+const emit = defineEmits<Emits>()
+
 const ProductStatusLabels = {
   [EProductStatus.promote]: 'продвигается',
   [EProductStatus.hidden]: 'скрыто',
@@ -22,26 +27,48 @@ const handlePromote = (id: Product['id']) => {
 <template>
   <div
     v-if="product"
-    class="relative w-[430px] flex flex-col items-center p-[8px]"
+    class="relative w-screen sm:w-[430px] flex flex-col items-center px-[16px] md:p-[8px]"
   >
     <div
       v-if="product.status !== EProductStatus.hidden"
-      class="absolute top-[16px] left-[16px] z-[2] flex items-center gap-[4px]"
+      class="absolute w-[calc(100%-40px)] top-[16px] left-[16px] z-[2] flex items-center justify-between"
     >
-      <div class="chip">
-        <EyeIcon />
-        <span>
-          {{ formatPrice(product.views, '') }}
-        </span>
+      <div class="flex gap-[4px]">
+        <div class="chip">
+          <EyeIcon />
+          <span>
+            {{ formatPrice(product.views, '') }}
+          </span>
+        </div>
+        <div v-if="product.createdAt" class="chip">
+          <CalendarIcon />
+          <span>
+            {{
+              `${calculateDaysBehind(product.createdAt)} ${endingSubstitution(calculateDaysBehind(product.createdAt), ['день', 'дня', 'дней'])}`
+            }}
+          </span>
+        </div>
       </div>
-      <div v-if="product.createdAt" class="chip">
-        <CalendarIcon />
-        <span>
-          {{
-            `${calculateDaysBehind(product.createdAt)} ${endingSubstitution(calculateDaysBehind(product.createdAt), ['день', 'дня', 'дней'])}`
-          }}
-        </span>
-      </div>
+
+      <VMenu>
+        <template #activator="{ props }">
+          <div class="profile-btn">
+            <VBtn
+              v-bind="props"
+              variant="outlined"
+              text="Действия"
+              :height="32"
+              class="text-none px-0 !text-[13px] text-primary !font-medium !bg-bg-light !border-bg-grey"
+            />
+          </div>
+        </template>
+        <VList>
+          <VListItem title="В корзину" @click="emit('add-to-cart', product)" />
+          <VListItem title="В избранное" />
+          <VDivider class="border-opacity-100" />
+          <VListItem title="Пожаловаться" />
+        </VList>
+      </VMenu>
     </div>
 
     <img

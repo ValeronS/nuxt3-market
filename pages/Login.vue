@@ -15,7 +15,7 @@ const login = async () => {
       body: { username: username.value, password: password.value },
     })
     authStore.setToken(token)
-    navigateTo(AppUrls.home.path)
+    navigateTo(AppUrls.agents.path)
   } catch (e) {
     const error = e as BackendError
     if (error.data?.statusMessage) errorMessage.value = error.data.statusMessage
@@ -28,7 +28,7 @@ watch([username, password], () => {
 </script>
 
 <template>
-  <div class="h-full flex justify-center align-center">
+  <div class="h-full flex justify-center align-center p-[32px]">
     <VCard variant="flat" :width="500">
       <VCardTitle class="text-center">Авторизация</VCardTitle>
 

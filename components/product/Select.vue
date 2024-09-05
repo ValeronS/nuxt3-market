@@ -38,8 +38,7 @@ const toggle = () => {
 </script>
 
 <template>
-  <div>
-    <!--    TODO select placeholder, border color -->
+  <div class="w-screen max-w-[454px] px-[16px]">
     <VSelect
       v-model="selected"
       v-model:menu="isOpen"
@@ -47,7 +46,6 @@ const toggle = () => {
       variant="outlined"
       bg-color="#DBDBDB"
       label="Все товары и услуги"
-      class="w-[438px]"
     >
       <template #prepend-item>
         <v-list-item title="Все товары и услуги" @click="toggle">
@@ -80,5 +78,8 @@ const toggle = () => {
 <style scoped lang="scss">
 :deep(.v-field) {
   border-radius: 12px;
+}
+:deep(.v-label) {
+  opacity: unset;
 }
 </style>
