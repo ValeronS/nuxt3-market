@@ -1,5 +1,6 @@
 import type { DaysOfWeek, Route } from '~/utils/types'
 
+// список всех роутов
 export const AppUrls: Record<string, Route> = {
   index: {
     path: '/',

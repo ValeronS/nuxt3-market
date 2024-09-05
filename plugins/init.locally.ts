@@ -1,6 +1,7 @@
 import type { Locally } from '~/utils/types'
 
-// для исключения ошибки доступа к localStorage из серверной части приложения
+// плагин нужен для исключения ошибки доступа к localStorage из серверной части приложения
+
 export default defineNuxtPlugin(() => {
   return {
     provide: {

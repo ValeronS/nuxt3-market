@@ -2,6 +2,7 @@
 import type { AgentPerson } from '~/utils/types'
 import { storeToRefs } from '#imports'
 
+// страница доступна только авторизованным пользователям, редирект на страницу логина
 definePageMeta({
   middleware: 'auth',
 })

@@ -2,7 +2,7 @@
 import CheckedIcon from 'assets/icon/CheckedIcon.vue'
 import type { Category } from '~/utils/types'
 
-const selected = defineModel<number | null>()
+const selected = defineModel<number | null>() // определение переменной с двусторонним связыванием с родительским компонентом
 
 const { data: categories } = await useFetch<Category[]>('/product/categories')
 
@@ -11,7 +11,7 @@ type CategorizedItem =
   | { props: { category: string } }
 
 const sortedCategories = computed<CategorizedItem[]>(() => {
-  // для корректной работы v-select нужно к объектам списка добавить свойства props с нужными для логики данными
+  // для корректной работы v-select нужно к объектам списка добавить свойства props с требуемыми для логики сортировки и объединения в категории данными
   if (!categories.value) return []
   const sorted = [...categories.value]
   sorted.sort((a, b) => a.category - b.category)

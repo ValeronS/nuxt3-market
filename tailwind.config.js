@@ -1,11 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 export const theme = {
-  container: {
-    center: true,
-    screens: {
-      '2xl': '1200px',
-    },
-  },
   extend: {
     fontFamily: {
       noto: ['Noto Serif', 'serif'],

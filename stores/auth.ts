@@ -10,6 +10,7 @@ export const useAuthStore = defineStore('authStore', () => {
     $locally.setItem('auth-token', newToken)
   }
 
+  // получение токена из localStorage
   const getToken = () => {
     token.value = $locally.getItem('auth-token')
     return token.value

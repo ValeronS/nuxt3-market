@@ -6,11 +6,12 @@ const cartStore = useCartStore()
 
 const { data: products } = await useFetch<Product[]>('/product/list')
 
-const selectedCategory = ref<number | null>(null)
+const selectedCategory = ref<number | null>(null) // фильтрация по категориям продуктов
 const cart = ref<Set<Product>>(new Set<Product>())
 
 const handleCart = (product: Product) => {
-  cart.value.has(product) ? cart.value.delete(product) : cart.value.add(product)
+  if (cart.value.has(product)) cart.value.delete(product)
+  else cart.value.add(product)
   cartStore.setCart(cart.value)
 }
 </script>

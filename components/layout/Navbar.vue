@@ -90,6 +90,7 @@ const handleLogout = () => {
                 <div class="flex items-center justify-between gap-[8px]">
                   <MenuBurgerIcon />
                   <img
+                    v-if="authStore.token"
                     :src="data?.imageUrl"
                     alt="avatar"
                     :width="40"
@@ -100,9 +101,14 @@ const handleLogout = () => {
             </div>
           </template>
           <VList>
-            <VListItem :title="data?.name" />
-            <VDivider class="border-opacity-100" />
-            <VListItem title="Выйти" @click="handleLogout" />
+            <template v-if="authStore.token">
+              <VListItem :title="data?.name" />
+              <VDivider class="border-opacity-100" />
+              <VListItem title="Выйти" @click="handleLogout" />
+            </template>
+            <NuxtLink v-else id="LoginLink" :to="AppUrls.login.path">
+              <VListItem title="Войти" />
+            </NuxtLink>
           </VList>
         </VMenu>
       </div>

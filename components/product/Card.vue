@@ -50,25 +50,30 @@ const handlePromote = (id: Product['id']) => {
         </div>
       </div>
 
-      <VMenu>
-        <template #activator="{ props }">
-          <div class="profile-btn">
-            <VBtn
-              v-bind="props"
-              variant="outlined"
-              text="Действия"
-              :height="32"
-              class="text-none px-0 !text-[13px] text-primary !font-medium !bg-bg-light !border-bg-grey"
+      <div class="block md:hidden">
+        <VMenu>
+          <template #activator="{ props }">
+            <div class="profile-btn">
+              <VBtn
+                v-bind="props"
+                variant="outlined"
+                text="Действия"
+                :height="32"
+                class="text-none px-0 !text-[13px] text-primary !font-medium !bg-bg-light !border-bg-grey"
+              />
+            </div>
+          </template>
+          <VList>
+            <VListItem
+              title="В корзину"
+              @click="emit('add-to-cart', product)"
             />
-          </div>
-        </template>
-        <VList>
-          <VListItem title="В корзину" @click="emit('add-to-cart', product)" />
-          <VListItem title="В избранное" />
-          <VDivider class="border-opacity-100" />
-          <VListItem title="Пожаловаться" />
-        </VList>
-      </VMenu>
+            <VListItem title="В избранное" />
+            <VDivider class="border-opacity-100" />
+            <VListItem title="Пожаловаться" />
+          </VList>
+        </VMenu>
+      </div>
     </div>
 
     <img

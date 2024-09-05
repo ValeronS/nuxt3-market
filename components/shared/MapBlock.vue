@@ -25,9 +25,8 @@ withDefaults(defineProps<Props>(), {
     :settings="{
       location: {
         center: [latitude, longitude],
-        zoom: 13,
+        zoom: 13, // степень отдаления карты
       },
-      showScaleInCopyrights: true,
     }"
     :width="width"
     :height="height"

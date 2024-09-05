@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { CompanyAbout, CompanyReview } from '~/utils/types'
 import ArrowMenuDownIcon from 'assets/icon/ArrowMenuDownIcon.vue'
-import { daysOfWeek } from '~/utils/constants'
 import MapBlock from '~/components/shared/MapBlock.vue'
+import type { CompanyAbout, CompanyReview } from '~/utils/types'
+import { daysOfWeek } from '~/utils/constants'
 
 const { data: company } = await useFetch<Company>('/company/get-by-id?id=1')
 const { data: companyReview } = await useFetch<CompanyReview>(
@@ -13,6 +13,7 @@ const { data: companyAbout } = await useFetch<CompanyAbout>(
 )
 
 const todaySchedule = computed(() => {
+  // определение и подстановка расписания на текущий день
   const todayIndex = new Date().getDay() // индекс дня недели (0 - Воскресенье, 6 - Суббота)
   const today = daysOfWeek[todayIndex] // название дня недели
   const item = companyAbout.value?.schedule.find((i) =>
